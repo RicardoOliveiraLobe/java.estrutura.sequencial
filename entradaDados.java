@@ -1,47 +1,38 @@
-import java.util.Locale;
+import java.util.Scanner;
 
 public class entradaDados {
 
     public static void main(String[] args) {
 
-        int y = 40;
-        double z = 10.678541454;
-        String nome = "Maria";
-        int idade = 31;
-        Double renda = 4000.0;
+        Scanner sc = new Scanner(System.in);
+        String x;
+        x = sc.next();
 
-        System.out.printf("%s tem %d anos e ganha R$ %.2f reais%n", nome, idade, renda);
+        int y;
+        y = sc.nextInt();
 
-        System.out.print("inicio ");
-        System.out.println("das aulas ");
-        System.out.println(y);
-        System.out.println(z);
-        System.out.printf("%.2f%n", z);
-        System.out.printf("%.4f%n", z);
-        Locale.setDefault(Locale.US);        
-        System.out.printf("%.4f%n", z);
+        double z;
+        z = sc.nextDouble();
 
-        //concatenação println
-        System.out.println("RESULTADO = " + z + " METROS");
+        System.out.printf("escrita: " + x);
+        System.out.println();
+        System.out.printf("numero: " + y);
+        System.out.println();
+        System.out.printf("ponto flutuante: " + z);
 
-        //concatenação printf
-        System.out.printf("RESULTADO = %.2f METROS%n", z);
-        //O marcador (no caso %.2f) é substituido pelo valor da variável (no caso z)  
-        
-
+        sc.close();
 
     }
 }
 
-//print - sem quebra de linha
-//println - com quebra de linha
-//printf - formatação de texto
+// import java.util.Scanner; importa a classe scanner
 
-//%.2f - formatação de número decimal com 2 casas decimais
-//%n - quebra de linha
+// Scanner sc = new Scanner (System.in); cria uma variavel chamada scanner (sc)
+// (new) cria um objeto novo na memória, (System.in) parâmetro que diz aonde o
+// scanner vai ler
 
-//locale.setDefault(Locale.US) - define o local para os Estados Unidos, afeta a formatação
-//  de números decimais usando ponto 
+// sc.next(); lê o conteudo no terminal e armazena na variavel
 
-// marcadores %d = inteiro, %s = string, %f = número decimal, %.2f = número decimal com
-//  2 casas decimais, %n = quebra de linha
+// sc.close(); fecha o Scanner
+
+// sysout + control + espaço
